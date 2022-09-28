@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+
+$dark: #19283f;
+$accent: #33d1cc;
+$main-btn: #ff3150;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif !important;
+}
+%accent {
+  color: $accent;
+}
+/* Style start */
+.navbar {
+  background-color: $dark;
+  .navbar-nav {
+    .nav-link {
+      color: white;
+      font-weight: 500
+    }
+    .nav-link.active {
+      @extend %accent;
+    }
+    .nav-link:hover {
+      @extend %accent;
+    }
+    .nav-link:focus {
+      @extend %accent;
+    }
+  }
+  .search {
+    color: $accent;
+    border-left: 2px solid $accent;
+    svg {
+      cursor: pointer;
+    }
+  }
+  .navbar-toggler {
+    color: white;
+    font-size: 20px;
+    border: 1px solid white;
+    &:focus {
+      box-shadow: none;
+    }
+    &[aria-expanded="true"] {
+      border: 1px solid $accent;
+    }
+  }
+  .main-btn {
+    color: yellow;
+    padding: 0.5rem 1rem;
+  }
+}
+/* Start navbar */
+
+/* Style end */
