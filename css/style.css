@@ -7,11 +7,12 @@
 
 body {
   font-family: "Roboto", sans-serif !important;
-  height: 5000px;
 }
 
-.navbar .navbar-nav .nav-link:focus, .navbar .navbar-nav .nav-link:hover, .navbar .navbar-nav .nav-link.active {
-  color: #33d1cc;
+.projects .projects .project::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Style start */
@@ -30,6 +31,15 @@ body {
 .navbar .navbar-nav .nav-link {
   color: white;
   font-weight: 500;
+}
+.navbar .navbar-nav .nav-link.active {
+  color: #33d1cc;
+}
+.navbar .navbar-nav .nav-link:hover {
+  color: #33d1cc;
+}
+.navbar .navbar-nav .nav-link:focus {
+  color: #33d1cc;
 }
 .navbar .search {
   color: #33d1cc;
@@ -98,7 +108,7 @@ body {
   background-color: #eff7fa;
 }
 .projects .filter {
-  gap: 1.8rem;
+  gap: 1.5rem;
 }
 .projects .filter .active {
   background-color: #ff3150;
@@ -120,29 +130,112 @@ body {
   width: 100%;
   border: 4px solid white;
 }
-.projects .projects .col {
+.projects .projects .project {
   position: relative;
 }
-.projects .projects .col .overlay {
-  background-color: rgba(0, 177, 171, 0.6235294118);
-  color: white;
+.projects .projects .project::after {
+  width: 95%;
+  height: 100%;
+  background-color: #33d1cc;
+  content: "Application";
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%) scaleX(0);
-  width: 90%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease-in-out;
+  transform: scaleX(0);
   transform-origin: left;
+  transition: all 0.3s ease-in-out;
   font-weight: bold;
   font-size: 1.5rem;
 }
-.projects .projects .col:hover .overlay {
-  transform: translateX(-50%) scaleX(1);
+.projects .projects .project:hover::after {
+  transform: scaleX(1);
 }
 
 /* End Projects */
+/* Start About */
+.about .desc {
+  max-width: 500px;
+}
+
+/* End About */
+/* Start Team */
+.team {
+  background-color: #eff7fa;
+}
+.team .heading h2 {
+  color: #ffc400;
+}
+.team .box {
+  background-color: white;
+}
+.team .box h4 {
+  background-color: #33d1cc;
+  padding: 0.5rem 1rem;
+  color: white;
+}
+.team .box blockquote {
+  padding: 0.5rem;
+}
+
+/* End Team */
+/* Start start-project */
+.start-project {
+  background-color: #19283f;
+  color: white;
+}
+
+/* End start-project */
+/* Start Subscribe */
+.subscribe {
+  background-color: #ffc400;
+}
+.subscribe input[type=email] {
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+}
+.subscribe input[type=email]:focus {
+  outline: none;
+}
+.subscribe input[type=email]::-moz-placeholder {
+  color: white;
+}
+.subscribe input[type=email]:-ms-input-placeholder {
+  color: white;
+}
+.subscribe input[type=email]::placeholder {
+  color: white;
+}
+.subscribe input[type=submit] {
+  background-color: #19283f;
+  color: #ffc400;
+}
+.subscribe input[type=submit]:focus {
+  outline: none;
+}
+
+/* End Subscribe */
+/* Start Footer */
+.footer {
+  background-color: #19283f;
+  color: white;
+}
+.footer .copyright > span {
+  color: #33d1cc;
+}
+.footer .copyright div span {
+  color: #ffc400;
+}
+.footer .contact .facebook {
+  background-color: #1877f2;
+}
+.footer .contact .twitter {
+  background-color: #1da1f2;
+}
+.footer .contact .linkedin {
+  background-color: #0077b5;
+}
+.footer .contact .youtube {
+  background-color: #ff0000;
+}
+/* End Footer */
 /* Style end *//*# sourceMappingURL=style.css.map */
