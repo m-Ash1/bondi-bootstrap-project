@@ -3,6 +3,8 @@
 $dark: #19283f;
 $accent: #33d1cc;
 $main-btn: #ff3150;
+$yellow: #ffc400;
+$section-bg: #eff7fa;
 
 * {
   margin: 0;
@@ -12,17 +14,28 @@ $main-btn: #ff3150;
 
 body {
   font-family: "Roboto", sans-serif !important;
+  height: 5000px;
 }
 %accent {
   color: $accent;
 }
 /* Style start */
+
+.main-btn {
+  background-color: $main-btn !important;
+  color: $yellow !important;
+  &:hover {
+    background-color: #a71228 !important;
+  }
+}
+
+/* Start navbar */
 .navbar {
   background-color: $dark;
   .navbar-nav {
     .nav-link {
       color: white;
-      font-weight: 500
+      font-weight: 500;
     }
     .nav-link.active {
       @extend %accent;
@@ -53,10 +66,108 @@ body {
     }
   }
   .main-btn {
-    color: yellow;
     padding: 0.5rem 1rem;
   }
 }
-/* Start navbar */
+/* End navbar */
+
+/* Start Landing */
+
+.landing {
+  background-color: $dark;
+  min-height: calc(100vh - 72px);
+}
+/* End Landing */
+
+.main-title {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    bottom: -20px;
+    height: 2px;
+    background-color: $accent;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Start features */
+.features {
+  .feature {
+    .icon-holder {
+      height: 200px;
+      svg {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .number {
+        font-size: 12rem;
+        color: $section-bg;
+      }
+      .icon {
+        font-size: 4rem;
+        color: $accent;
+      }
+    }
+    h4 {
+      color: $yellow;
+    }
+  }
+}
+/* End features */
+
+/* Start Projects */
+.projects {
+  background-color: $section-bg;
+  .filter {
+    gap: 1.8rem;
+    .active {
+      background-color: $main-btn;
+      color: $yellow;
+      padding: 0.5rem 1rem;
+    }
+    .filter-item {
+      cursor: pointer;
+      font-weight: 500;
+      &:hover {
+        color: $main-btn;
+      }
+    }
+  }
+  .projects {
+    margin-top: 3rem;
+    img {
+      width: 100%;
+      border: 4px solid white;
+    }
+    row-gap: 1.5rem;
+    .col {
+      position: relative;
+      .overlay {
+        background-color: #00b1ab9f;
+        color: white;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) scaleX(0);
+        width: 90%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+        transform-origin: left;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+      &:hover .overlay {
+        transform: translateX(-50%) scaleX(1);
+      }
+    }
+  }
+}
+
+/* End Projects */
 
 /* Style end */

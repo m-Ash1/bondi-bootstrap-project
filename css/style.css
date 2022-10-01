@@ -7,6 +7,7 @@
 
 body {
   font-family: "Roboto", sans-serif !important;
+  height: 5000px;
 }
 
 .navbar .navbar-nav .nav-link:focus, .navbar .navbar-nav .nav-link:hover, .navbar .navbar-nav .nav-link.active {
@@ -14,6 +15,15 @@ body {
 }
 
 /* Style start */
+.main-btn {
+  background-color: #ff3150 !important;
+  color: #ffc400 !important;
+}
+.main-btn:hover {
+  background-color: #a71228 !important;
+}
+
+/* Start navbar */
 .navbar {
   background-color: #19283f;
 }
@@ -40,9 +50,99 @@ body {
   border: 1px solid #33d1cc;
 }
 .navbar .main-btn {
-  color: yellow;
   padding: 0.5rem 1rem;
 }
 
-/* Start navbar */
+/* End navbar */
+/* Start Landing */
+.landing {
+  background-color: #19283f;
+  min-height: calc(100vh - 72px);
+}
+
+/* End Landing */
+.main-title::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  bottom: -20px;
+  height: 2px;
+  background-color: #33d1cc;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Start features */
+.features .feature .icon-holder {
+  height: 200px;
+}
+.features .feature .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.features .feature .icon-holder .number {
+  font-size: 12rem;
+  color: #eff7fa;
+}
+.features .feature .icon-holder .icon {
+  font-size: 4rem;
+  color: #33d1cc;
+}
+.features .feature h4 {
+  color: #ffc400;
+}
+
+/* End features */
+/* Start Projects */
+.projects {
+  background-color: #eff7fa;
+}
+.projects .filter {
+  gap: 1.8rem;
+}
+.projects .filter .active {
+  background-color: #ff3150;
+  color: #ffc400;
+  padding: 0.5rem 1rem;
+}
+.projects .filter .filter-item {
+  cursor: pointer;
+  font-weight: 500;
+}
+.projects .filter .filter-item:hover {
+  color: #ff3150;
+}
+.projects .projects {
+  margin-top: 3rem;
+  row-gap: 1.5rem;
+}
+.projects .projects img {
+  width: 100%;
+  border: 4px solid white;
+}
+.projects .projects .col {
+  position: relative;
+}
+.projects .projects .col .overlay {
+  background-color: rgba(0, 177, 171, 0.6235294118);
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  transform-origin: left;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.projects .projects .col:hover .overlay {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* End Projects */
 /* Style end *//*# sourceMappingURL=style.css.map */
